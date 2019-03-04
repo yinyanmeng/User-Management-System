@@ -1,0 +1,21 @@
+1.多页面使用：路由
+npm install vue-router --save
+
+2.main.js
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
+//设置路由组件component
+const router =new VueRouter({
+	mode:"history",
+	base: __dirname,
+	routes:[
+		{path:"/",component:Customers},
+		{path:"/about",component:About}
+	]
+})
+
+3.//路径components
+import Customers from './components/Customers'
+import About from './components/About'
